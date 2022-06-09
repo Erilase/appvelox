@@ -1,0 +1,586 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inheri;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: local('Rubik-Light');
+    src: url('./fonts/RubikLight.woff2') format('woff2'), url('./fonts/RubikLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: local('Rubik-regular');
+    src: url('./fonts/RubikRegular.woff2') format('woff2'), url('./fonts/RubikRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: local('Rubik-Medium');
+    src: url('../fonts/RubikMedium.woff2') format('woff2'), url('../fonts/RubikMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Rubik', 'sans-serif';
+}
+
+
+/*glob*/
+
+.container {
+    width: 1366px;
+    /* padding: 0 15px; */
+    /* margin: 0 auto; */
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-reset {
+    border: none;
+}
+
+.btn {
+    width: 150px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #7761FF;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn:focus {
+    outline: 1px solid #7761FF;
+    outline-offset: 3px;
+}
+
+.btn:hover {
+    background-color: #50CAFF;
+}
+
+.btn:active {
+    background-color: #003B72;
+}
+
+
+/*main*/
+
+.left-block {
+    /* position: fixed; */
+    /* width: 100%; */
+    min-height: 100%;
+    padding: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #003B72;
+    color: #FFFFFF;
+}
+
+.left-block-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-list {
+    flex-direction: column;
+}
+
+.nav-list-item {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 15px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+
+.nav-list-item:hover {
+    background-color: #FCFCFC;
+    /* border-right: transparent; */
+}
+
+.nav-list-item:hover a {
+    color: #7761FF;
+}
+
+.nav-list-item:hover .nav-list-logo {
+    fill: #7761FF;
+    stroke: #7761FF;
+}
+
+
+/* .nav-list-item:not(:last-child) {
+    margin-bottom: 38px;
+} */
+
+.nav-list {
+    margin-bottom: 25px;
+}
+
+.bottom-block {
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.list-item-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.nav-list-logo {
+    margin-right: 14px;
+}
+
+.help {
+    margin-bottom: 18px;
+}
+
+.nav-btn {
+    align-self: center;
+}
+
+.right-block {
+    width: 1176px;
+}
+
+.right-block-header {
+    background-color: #50CAFF;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.block-name {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+.client-photo {
+    margin-right: 8px;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+}
+
+.right-block-nav {
+    align-items: center;
+}
+
+.right-block-nav-list-link {
+    align-items: center;
+}
+
+.right-block-nav-list:not(:last-child) {
+    margin-right: 22px;
+}
+
+.appointment-wrapper {
+    margin-bottom: 35px;
+}
+
+.appointment-container {
+    padding: 15px 20px;
+    background-color: #FCFCFC;
+}
+
+.block-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.appointment-block {
+    width: 465px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px #EBE7FF;
+    border-radius: 5px;
+}
+
+.appointment-block:not(:last-child) {
+    margin-right: 20px;
+}
+
+.other-appointments {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 91px;
+    background-color: #FCFCFC;
+    box-shadow: none;
+}
+
+.other-appointments a {
+    color: #50CAFF;
+}
+
+.card-top {
+    width: 280px;
+    margin-bottom: 5px;
+}
+
+.card-bottom {
+    align-items: center;
+}
+
+.doctor-info {
+    align-items: center;
+    margin-right: auto;
+}
+
+.appointment-time {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.appointment-place {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    color: #000000;
+}
+
+.doctor-privat-info {
+    flex-direction: column;
+}
+
+.doctor-main-foto {
+    margin-right: 10px;
+}
+
+.doctor-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.doctor-profession {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #EBE7FF;
+}
+
+.appointment-btn {
+    width: 98px;
+    height: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.card-list {
+    flex-wrap: wrap;
+}
+
+.card-list-item {
+    width: 540px;
+    height: 183px;
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px #EBE7FF;
+    border-radius: 5px;
+    transition: outline 0.3s ease-in-out;
+}
+
+.card-list-item:not(:nth-child(2n)) {
+    margin-right: 16px;
+}
+
+.item-left-side {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.9s ease-in-out;
+}
+
+.item-right-side {
+    width: 75%;
+    padding: 20px 36px;
+}
+
+.electro-card-title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000;
+    border-bottom: 1px solid #EBE7FF;
+    transition: border-bottom 0.4s ease-in-out;
+}
+
+.electro-card-text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #000000;
+}
+
+.card-list-item:hover {
+    outline: 2px solid #50CAFF;
+}
+
+.card-list-item:hover .item-left-side {
+    background-color: #50CAFF;
+}
+
+.card-list-item:hover .electro-card-title {
+    border-bottom: 2px solid #50CAFF;
+}
+
+
+/* client-room */
+
+.right-block__wrapper {
+    padding: 15px 20px;
+}
+
+.two-side-wrapper {
+    max-height: 645px;
+    /* outline: 2px solid red; */
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.right-block__aside {
+    margin-bottom: 15px;
+}
+
+.right-block__aside::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    margin-right: 14px;
+    background-image: url('./img/block-name-arrow.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+}
+
+.appointment-block-client-room {
+    max-width: 465px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px #EBE7FF;
+    border-radius: 5px;
+}
+
+.appointment-block-client-room:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.right-block__left-side {
+    width: 40%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: #EBE7FF #003B72;
+    scrollbar-width: thin;
+    /* outline: 2px solid green; */
+}
+
+.right-block__left-side::-webkit-scrollbar {
+    height: 45px;
+}
+
+.right-block__left-side::-webkit-scrollbar-track {
+    background-color: #EBE7FF;
+}
+
+.right-block__left-side::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 1px solid grey;
+    background-color: #003B72;
+    border-radius: 100px;
+}
+
+.right-block__right-side {
+    width: 55%;
+    height: 100%;
+    /* outline: 1px solid navy; */
+}
+
+
+/* calendar */
+
+
+/* Month header */
+
+.calendar {
+    width: 573px;
+    height: 481px;
+    background-color: #EBE7FF;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.calendar__month {
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #7761FF;
+}
+
+.calendar__month span {
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.calendar__month span::before {
+    content: "";
+    display: inline-block;
+    margin-right: 35px;
+    width: 8px;
+    height: 14px;
+    background-image: url('./img/calendar-left-arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.calendar__month span::after {
+    content: "";
+    display: inline-block;
+    margin-left: 35px;
+    width: 8px;
+    height: 14px;
+    background-image: url('./img/calendar-right-arrow.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
+
+.calendar__wrapper {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #EBE7FF;
+}
+
+.weekdays {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    background-color: #EBE7FF;
+    ;
+}
+
+.weekdays li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79px;
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+
+.days {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.days li {
+    position: relative;
+    box-sizing: border-box;
+    top: 11px;
+    width: 79px;
+    height: 63px;
+    padding-top: 11px;
+    padding-left: 14px;
+    /* padding: 10px 54px 33px 16px; */
+    background-color: #FFFFFF;
+    z-index: 50;
+}
+
+.grey-days {
+    background-color: black;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.meeting {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    top: 31px;
+    right: 10px;
+    background-color: #50CAFF;
+    border-radius: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #fff;
+}
